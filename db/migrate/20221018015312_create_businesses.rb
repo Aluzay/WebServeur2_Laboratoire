@@ -7,6 +7,8 @@ class CreateBusinesses < ActiveRecord::Migration[7.0]
       t.string :email
       t.string :site_web
 
+      t.belongs_to :user, foreign_key: true
+
       t.timestamps
     end
   end

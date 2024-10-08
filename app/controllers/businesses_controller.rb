@@ -1,6 +1,6 @@
 class BusinessesController < PublicController
   def index
-    @businesses = Business.all.order("name ASC")
+    @businesses = Business.all.where(user_id: current_user.id).order("name ASC")
   end
 
   def show

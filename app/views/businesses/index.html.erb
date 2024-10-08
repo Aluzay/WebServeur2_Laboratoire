@@ -1,4 +1,4 @@
-<h1>Bienvue</h1>
+<h1>Vos restaurants</h1>
 <i>Vous avez <%= @businesses.count %> visible</i>
 <hr />
 
@@ -8,7 +8,7 @@
             <td><%= business.name %></td>
 
             <td>
-                <%= link_to "show", business_path(business) %>
+                <%= link_to "show", menu_path(business) %>
             </td>
         </tr>
     <% end %>
