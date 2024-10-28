@@ -1,0 +1,15 @@
+<h1>Bienvue</h1>
+<i>Vous avez <%= @businesses.count %> visible</i>
+<hr />
+
+<table>
+    <% @businesses.each do |business| %>
+        <tr>
+            <td><%= business.name %></td>
+
+            <td>
+                <%= link_to "show", business_path(business) %>
+            </td>
+        </tr>
+    <% end %>
+</table>

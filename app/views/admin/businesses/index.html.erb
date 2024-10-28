@@ -1,0 +1,15 @@
+<h1>Bienvue dans la partie Admin</h1>
+<i>Vous avez <%= @businesses.count %> visible</i>
+<hr />
+
+<table>
+    <% @businesses.each do |business| %>
+        <tr>
+            <td> <%= business.id %> <%= business.name %></td>
+
+            <td>
+                <%= link_to "show", admin_business_path(business) %>
+            </td>
+        </tr>
+    <% end %>
+</table>
