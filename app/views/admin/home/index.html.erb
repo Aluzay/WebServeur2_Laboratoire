@@ -1,0 +1,10 @@
+<h1>Bienvue dans la section admin</h1>
+
+<% if current_user %>
+    <i>Vous êtes connecté en tant que <%= current_user.email %></i>
+    <br />
+    <% if current_user.admin? %>
+        <p class="user"><%= link_to "Tous les menus", admin_root_path %></p>
+      <% end %>
+    <%= link_to "Vos menus", mesmenus_path %>
+<% end %>
