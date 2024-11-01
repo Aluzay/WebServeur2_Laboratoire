@@ -3,8 +3,5 @@
 <% if current_user %>
     <i>Vous êtes connecté en tant que <%= current_user.email %></i>
     <br />
-    <% if current_user.admin? %>
-        <p class="user">Admin: <%= link_to "Section admin", admin_root_path %></p>
-      <% end %>
     <%= link_to "Mes menus", mesmenus_path %>
 <% end %>
